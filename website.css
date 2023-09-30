@@ -1,0 +1,394 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Dosis', sans-serif;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+    border: none;
+    outline: none;
+}
+:root{
+    --bg-color:#191919;
+    --second-bg-color: #101010;
+    --main-color:#e9204f;
+    --text-color:#fff;
+    --second-color:#e4e4e4;
+    --oter-color: #c6c9d8bf;
+
+    --h1-font: 7rem;
+    --h2-font: 3.5rem;
+    --p-font: 1.1rem;
+}
+body{
+    color: var(--main-color);
+    background-color: var(--bg-color);
+}
+/*===========================================header start=========================================*/
+header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    padding: 28px 11%;
+    border-bottom: 1px solid transparent;
+    transition: all ease .50s;
+}
+.logo img{
+    width: 25%;
+    height: auto;
+}
+.nav-list{
+    display: flex;
+}
+.nav-list a{
+    color: var(--second-color);
+    font-size: var(--p-font);
+    font-weight: 600;
+    margin: 0 40px;
+    transition: all ease .40s;
+}
+nav-list a:hover{
+    color: var(--main-color);
+}
+#menu-icon{
+    font-size: 42px;
+    color: var(--text-color);
+    z-index: 10001;
+    cursor: pointer;
+    display: none;
+}
+section{
+    padding: 120px 19% 100px;
+}
+header.sticky{
+    background-color: #000;
+    padding: 15px 11%;
+    border-bottom: 1px solid var(--bg-color);
+}
+/*===========================================header end=========================================*/
+/*===========================================hero start=========================================*/
+.home{
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    background: url(background.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.hero-text h3{
+    color: var(--second-color);
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    word-spacing: 10px;
+}
+.hero-text h1{
+    font-weight: 800;
+    columns: var(--text-color);
+    font-size: var(--h1-font);
+    color: var(--text-color);
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+.hero-text h4{
+    color: var(--second-color);
+    font-size: 25px;
+    font-weight: 600;
+    word-spacing: 15px;
+    margin-bottom: 3.5rem;
+}
+.btn{
+    display: inline-block;
+    padding: 16px 45px;
+    background-color: var(--main-color);
+    color: var(--text-color);
+    font-size: var(--p-font);
+    font-weight: 600;
+    border: 2px solid var(--main-color);
+    transition: all ease .50s;
+    border-radius: 10px;
+}
+.btn:hover{
+    transform: translateX(5px);
+    background: transparent;
+}
+/*===========================================header end=========================================*/
+/*===========================================about start=========================================*/
+.about{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 4rem;
+}
+.about-img img {
+    width: 100%;
+    height: auto;
+}
+.about-text h2{
+    font-size: var(--h2-font);
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+.about-text h5{
+    font-size: 22px;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+.about-text p{
+    color: var(--oter-color);
+    font-size: var(--p-font);
+    line-height: 30px;
+    margin-bottom: 3rem;
+}
+.service{
+    background-color: var(--second-bg-color);
+}
+.text-center{
+    text-align: center;
+}
+.text-center h2{
+    font-size: var(--h2-font);
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+.text-center h4{
+    font-size: 22px;
+    font-weight: 500;
+}
+/*===========================================about end=========================================*/
+/*===========================================service start=========================================*/
+.service-item{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    align-items: center;
+    gap: 2.2rem;
+    text-align: center;
+    margin-top: 4rem;
+}
+.service-box{
+    padding: 45px 30px;
+    background-color: var(--second-bg-color);
+    border-radius: 0.8rem;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all ease .50s;
+}
+.service-box i{
+    font-size: 50px;
+    color: var(--main-color);
+    margin-bottom: 20px;
+}
+.service-box h3{
+    font-size: 23px;
+    font-weight: 700;
+    margin-bottom: 12px;
+
+}
+.service-box p{
+    color: var(--oter-color);
+    font-size: var(--p-font);
+    line-height: 30px;
+    margin-bottom: 1.5rem;
+}
+.s-btn{
+    display: inline-block;
+    padding: 9px 24px;
+    background: var(--main-color);
+    color: var(--text-color);
+    font-size: 15px;
+    font-weight: 500;
+    border: 2px solid transparent;
+    border-radius: 2rem;
+    transition: all ease .50s;
+}
+.s-btn:hover{
+    transform: scale(1.1);
+    background: transparent;
+    border: 2px solid var(--main-color);
+}
+.service-box:hover{
+    transform: translateY(-8px);
+    border: 1px solid #4e5055;
+}
+/*===========================================service end=========================================*/
+/*===========================================portfolio start=========================================*/
+#portfolio{
+    min-height: 100vh;
+}
+.portfolioheading{
+    margin: 5rem 0;
+    text-align: center;
+    color: var(--text-color);
+    font-size: 3rem;
+}
+.portfolio{
+    margin: 0 10%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 4rem;
+}
+.portfolio1{
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 230px;
+}
+.portfolio1 img{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.portfolioheading h1{
+    font-size: 5rem;
+}
+/*===========================================portfolio end=========================================*/
+/*===========================================footer start=========================================*/
+.contact{
+    background-color: var(--second-bg-color);
+}
+.right-contact{
+    text-align: center;
+}
+.right-contact h3{
+    font-size: var(--h2-font);
+    color: var(--text-color);
+    margin: 20px 0;
+}
+.right-contact p{
+    color: var(--text-color);
+    font-size: var(--p-font);
+    line-height: 20px;
+    margin-bottom: 20px;
+}
+.end-icon i{
+    height: 40px;
+    width: 40px;
+    background: var(--main-color);
+    color: var(--text-color);
+    border: 2px solid var(--main-color);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    border-radius: 50%;
+    margin: 0 9px;
+    transition: all ease .50s;
+}
+.end-icon i:hover{
+    transform: translateY(-5px);
+    background-color: transparent;
+    border: 2px solid var(--main-color);
+}
+/*===========================================footer end=========================================*/
+/*===========================================media query start=========================================*/
+@media (max-width:1600px){
+    header{
+        padding: 14px 4%;
+    }
+    .header.sticky{
+        padding: 8px 4%;
+    }
+    section{
+        padding: 100px 5% 80px;
+    }
+
+}
+@media (max-width:1200px){
+    home{
+        min-height: 90vh;
+    }
+    .nav-list a{
+        margin: 0 20px;
+    }
+   :root{
+    --h1-font: 5rem;
+    --h2-font: 3.1rem;
+    --p-font: 1rem;
+   }
+}
+@media (max-width:1060px){
+   .about{
+     grid-template-columns: repeat(1, 1fr);
+   }
+   .about-img{
+    text-align: center;
+    order: 2;
+   }
+   .about-img img{
+    max-width: 100%;
+    width: 600px;
+    height: auto;
+   }
+}
+@media (max-width:870px){
+    #menu-icon{
+        display: block;
+    }
+    .nav-list{
+        display: none;
+    }
+    .open{
+        position: absolute;
+        top: 80px;
+        right: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        background: #000;
+        padding: 20px 0;
+        text-align: left;
+        transition: all ease .50s;
+        display: bl;
+    }
+    .open a{
+        display: block;
+        font-size: 22px;
+        padding: 10px 0;
+    }
+}
+@media (max-width:660px){
+    .home{
+        min-height: 80vh;
+    }
+    :root{
+        --h1-font:3.8rem;
+        --h2-font:2.7rem;
+        --p-font:15px;
+    }
+    .hero-text h4{
+        font-size: 18px;
+        word-spacing: 10px;
+        margin-bottom: 30px;
+    }
+    .btn{
+        padding: 10px 35px;
+    }
+    .in i{
+        font-size: 60px;
+    }
+    .in h4{
+        font-size: 20px;
+    }
+}
+@media (max-width:460px){
+    :root{
+        --h1-font:3.5rem;
+        --h2-font:2.5rem;
+    }
+    .hero-text h4{
+        font-size: 16px;
+        word-spacing: 7px;
+    }
+}
+
